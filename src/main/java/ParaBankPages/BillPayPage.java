@@ -13,7 +13,7 @@ public class BillPayPage {
     }
 
     private  final By PayeeNameField = By.name("payee.name");
-    private  final By AdressField = By.name("payee.address.street");
+    private  final By AddressField = By.name("payee.address.street");
     private  final By CityField = By.name("payee.address.city");
     private  final By StateField = By.name("payee.address.state");
     private  final By ZipCodeField = By.name("payee.address.zipCode");
@@ -26,7 +26,7 @@ public class BillPayPage {
     public void BillPay(String Name, String Address, String City, String State, String ZipCode, String Phone, String Account, String VerifyAccount, String Amount){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         driver.findElement(PayeeNameField).sendKeys(Name);
-        driver.findElement(AdressField).sendKeys(Address);
+        driver.findElement(AddressField).sendKeys(Address);
         driver.findElement(CityField).sendKeys(City);
         driver.findElement(StateField).sendKeys(State);
         driver.findElement(ZipCodeField).sendKeys(ZipCode);

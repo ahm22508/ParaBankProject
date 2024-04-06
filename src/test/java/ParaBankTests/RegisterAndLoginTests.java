@@ -27,8 +27,8 @@ public class RegisterAndLoginTests extends Base {
     }
 @Test
     public void inValidRegister(){
-        new RegisterPage(driver).
-                RegisterToSite(FirstName, LastName, Address, City, State, ZipCode, PhoneNumber, SSN, UserName, Password, ConfirmPassword);
+
+          new LoginPage(driver).GoToRegisterPage().RegisterToSite(FirstName, LastName, Address, City, State, ZipCode, PhoneNumber, SSN, UserName, Password, ConfirmPassword);
         Assert.assertTrue(driver.findElement(RegisterPage.AssertErrorRegister()).isDisplayed());
     }
     @Test
