@@ -2,10 +2,7 @@ package ParaBankPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 
 public class HomePage {
     private final WebDriver driver;
@@ -16,6 +13,7 @@ public class HomePage {
     private final By TransferFunds = By.xpath("//a[text()='Transfer Funds']");
     private final By BillPay = By.xpath("//a[text()='Bill Pay']");
     private final By UpdateInfo = By.xpath("//a[text()='Update Contact Info']");
+    private final By RquestLoan = By.xpath("//a[text()='Request Loan']");
     public static By OpenNewAccount(){
         return By.xpath("//a[text()='Open New Account']");
     }
@@ -36,6 +34,10 @@ public class HomePage {
     public UpdateInfoPage ClickOnUpdateInfo(){
         driver.findElement(UpdateInfo).click();
         return new UpdateInfoPage(driver);
+    }
+    public LoanRequestPage RequestLoan(){
+        driver.findElement(RquestLoan).click();
+    return new LoanRequestPage(driver);
     }
 
 

@@ -16,5 +16,8 @@ public class FinishPage {
     public static By UpdateInfoCompleted(){
         return By.xpath("//h1[text()='Profile Updated']");
     }
+    public static By LoanRequestApproved(){
+        return By.xpath("//td[text()='Approved']");
+    }
 
 }
