@@ -15,15 +15,15 @@ public class RegisterAndLoginTests extends Base {
     String ZipCode = "58458" ;
     String PhoneNumber  ="01554863523";
     String SSN = "29224";
-    String UserName= "aamrfou";
-    String Password = "aamrfou55";
+    static String UserName= "aamrfou";
+    static String Password = "aamrfou55";
     String ConfirmPassword= "aamrfou55";
     String InvalidUserName = "aamrf";
     String InvalidPassword = "aamrfou";
     @Test
     public void ValidRegister(){
         new LoginPage(driver).GoToRegisterPage().RegisterToSite(FirstName, LastName, Address, City, State, ZipCode, PhoneNumber, SSN, UserName, Password, ConfirmPassword);
-        Assert.assertTrue(driver.findElement(HomePage.AssertRegisterorLoginCorrect()).isDisplayed());
+        Assert.assertTrue(driver.findElement(HomePage.OpenNewAccount()).isDisplayed());
     }
 @Test
     public void inValidRegister(){
@@ -34,7 +34,7 @@ public class RegisterAndLoginTests extends Base {
     @Test
     public void ValidLogin(){
         new LoginPage(driver).Login(UserName,Password);
-        Assert.assertTrue(driver.findElement(HomePage.AssertRegisterorLoginCorrect()).isDisplayed());
+        Assert.assertTrue(driver.findElement(HomePage.OpenNewAccount()).isDisplayed());
     }
     @Test
     public void InvalidLogin(){
