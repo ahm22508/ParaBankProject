@@ -14,7 +14,7 @@ public class HomePage {
     }
 
     private final By TransferFunds = By.xpath("//a[text()='Transfer Funds']");
-
+    private final By BillPay = By.xpath("//a[text()='Bill Pay']");
     public static By OpenNewAccount(){
         return By.xpath("//a[text()='Open New Account']");
     }
@@ -23,11 +23,14 @@ public class HomePage {
         driver.findElement(HomePage.OpenNewAccount()).click();
     return new NewAccountPage(driver);
     }
-    public  TransferPage ClickOwnTransferFunds(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(TransferFunds));
+    public  TransferPage ClickOnTransferFunds(){
         driver.findElement(TransferFunds).click();
-        return new TransferPage(driver);
+     return new TransferPage(driver);
+    }
+
+    public BillPayPage ClickOnBillPay(){
+        driver.findElement(BillPay).click();
+     return new BillPayPage(driver);
     }
 
 
