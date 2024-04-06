@@ -13,5 +13,8 @@ public class FinishPage {
     public static By PillPayComplete(){
         return By.xpath("//h1[text()='Bill Payment Complete']");
     }
+    public static By UpdateInfoCompleted(){
+        return By.xpath("//h1[text()='Profile Updated']");
+    }
 
 }

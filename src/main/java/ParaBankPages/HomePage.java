@@ -15,6 +15,7 @@ public class HomePage {
 
     private final By TransferFunds = By.xpath("//a[text()='Transfer Funds']");
     private final By BillPay = By.xpath("//a[text()='Bill Pay']");
+    private final By UpdateInfo = By.xpath("//a[text()='Update Contact Info']");
     public static By OpenNewAccount(){
         return By.xpath("//a[text()='Open New Account']");
     }
@@ -31,6 +32,10 @@ public class HomePage {
     public BillPayPage ClickOnBillPay(){
         driver.findElement(BillPay).click();
      return new BillPayPage(driver);
+    }
+    public UpdateInfoPage ClickOnUpdateInfo(){
+        driver.findElement(UpdateInfo).click();
+        return new UpdateInfoPage(driver);
     }
 
 

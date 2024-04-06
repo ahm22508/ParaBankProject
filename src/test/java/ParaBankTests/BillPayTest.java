@@ -5,7 +5,7 @@ import ParaBankPages.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class PillPayTest extends Base{
+public class BillPayTest extends Base{
     String Name ="Ahmed";
     String Address ="Shoubra";
     String City = "Cairo";

@@ -14,8 +14,8 @@ public class Base {
         driver =  new ChromeDriver();
         driver.navigate().to("https://parabank.parasoft.com/parabank/index.htm");
     }
-    @AfterMethod
-    public void EndDriver(){
-        driver.quit();
-    }
+//    @AfterMethod
+//    public void EndDriver(){
+//        driver.quit();
+//    }
 }
