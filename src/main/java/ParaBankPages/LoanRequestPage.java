@@ -23,7 +23,7 @@ public class LoanRequestPage {
         driver.findElement(AmountField).sendKeys(Amount);
         driver.findElement(AmountDownField).sendKeys(AmountDown);
         Select select = new Select(driver.findElement(IDAccountField));
-        select.selectByIndex(1);
+        select.selectByIndex(3);
         driver.findElement(ApplyButton).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(FinishPage.LoanRequestApproved()));
 
