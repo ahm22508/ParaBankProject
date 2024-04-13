@@ -36,6 +36,5 @@ public class BillPayPage {
         driver.findElement(AmountField).sendKeys(Amount);
         driver.findElement(SendPaymentButton).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(FinishPage.PillPayComplete()));
-
     }
 }

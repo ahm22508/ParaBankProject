@@ -13,7 +13,5 @@ public class Base {
         driver.navigate().to("https://parabank.parasoft.com/parabank/index.htm");
     }
     @AfterMethod
-    public void EndDriver(){
-        driver.quit();
-    }
+    public void EndDriver(){driver.quit();}
 }
