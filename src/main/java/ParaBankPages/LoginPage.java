@@ -28,5 +28,4 @@ public class LoginPage {
         driver.findElement(LoginButton).click();
     return new HomePage(driver);
     }
-
 }
