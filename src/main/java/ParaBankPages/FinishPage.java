@@ -19,5 +19,4 @@ public class FinishPage {
     public static By LoanRequestApproved(){
         return By.xpath("//td[text()='Approved']");
     }
-
 }

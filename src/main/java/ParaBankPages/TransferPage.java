@@ -1,12 +1,14 @@
 package ParaBankPages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.checkerframework.checker.units.qual.A;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
+
+
 
 public class TransferPage {
    private final WebDriver driver;
@@ -20,17 +22,18 @@ public class TransferPage {
 
 
     public void TransferFunds(String Money){
-        Select select = new Select(driver.findElement(IdAccount));
-        Select select1 = new Select(driver.findElement(ToIdAccount));
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(IdAccount));
         wait.until(ExpectedConditions.visibilityOfElementLocated(Amount));
+//        Actions action = new Actions(driver);
+//        action.moveToElement(driver.findElement(Amount)).click().sendKeys(Money).build().perform();
+        Select select = new Select(driver.findElement(IdAccount));
+        select.selectByIndex(0);
+        Select select1 = new Select(driver.findElement(ToIdAccount));
+        select1.selectByIndex(0);
         driver.findElement(Amount).sendKeys(Money);
-        select.selectByIndex(2);
-        select1.selectByValue("21003");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(TransferButton));
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(TransferButton));
         driver.findElement(TransferButton).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(FinishPage.TransferComplete()));
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(FinishPage.TransferComplete()));
 
     }
 }
